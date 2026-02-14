@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STV Playlists | 4PublicIntrest</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    /* Player Frame */
+    .video-wrapper {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      border: 6px solid #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .video-wrapper:after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      pointer-events: none;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      display: block;
+    }
+
+    /* Grid */
+    .playlist-grid {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      margin-top: 20px;
+    }
+
+    .playlist-card {
+      display: block;
+      padding: 18px;
+      background: #1e1e1e;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.25s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .playlist-card:hover {
+      transform: translateY(-4px);
+      background: #222;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    }
+
+    .playlist-icon {
+      font-size: 2rem;
+    }
+
+    .playlist-card h3 {
+      margin-top: 6px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>STV Playlists</h1>
+
+  <!-- Top Playlist Player -->
+  <div class="video-wrapper">
+    <iframe id="main-player"
+      src="https://www.youtube.com/embed/videoseries?list=PLQ9p6GARi5fBXDiGkLvzipdszZclzLj0u"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Playlist Grid -->
+  <section class="playlist-grid">
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fChdrASMyoBrsE2pbTMUBjn">
+      <div class="playlist-icon">🎧</div>
+      <h3>LOCAL BAR</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fBXDiGkLvzipdszZclzLj0u">
+      <div class="playlist-icon">🍖</div>
+      <h3>BBQ MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAOUlpJ7zlEuj3uhZRbj-Hd">
+      <div class="playlist-icon">🎉</div>
+      <h3>PARTY ANIMAL MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAFLehw9XMG879TOPH25LEV">
+      <div class="playlist-icon">🤘</div>
+      <h3>METAL HEAD MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fCLn4Sf32HUqvWhMbr-ujR-">
+      <div class="playlist-icon">🧠</div>
+      <h3>NEURODIVERGENT MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fBXDiGkLvzipdszZclzLj0u">
+      <div class="playlist-icon">📼</div>
+      <h3>OLD SCHOOL MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fDOm7LUB_cHacebHMEog_a4">
+      <div class="playlist-icon">🧹</div>
+      <h3>CLEAN UP MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAlH1ySBoNSlXZoS1bWLtAK">
+      <div class="playlist-icon">📚</div>
+      <h3>BACK OF THE CLASS MIX</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAnhHDpTfhcvYG6etiSKx9A">
+      <div class="playlist-icon">💪</div>
+      <h3>WORKOUT</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAmcCuSHRfkvLFUuRFVThzS">
+      <div class="playlist-icon">🎸</div>
+      <h3>INDIE</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAnhHDpTfhcvYG6etiSKx9A">
+      <div class="playlist-icon">🌳</div>
+      <h3>BACKYARD</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fB2wYdIvVJ57onC5tXk7seG">
+      <div class="playlist-icon">🔊</div>
+      <h3>TRAPPED OUT</h3>
+    </div>
+
+    <div class="playlist-card" data-id="PLQ9p6GARi5fAlH1ySBoNSlXZoS1bWLtAK">
+      <div class="playlist-icon">🎧</div>
+      <h3>ALTERNATIVE</h3>
+    </div>
+
+  </section>
+
+  <script>
+    const cards = document.querySelectorAll('.playlist-card');
+    const player = document.getElementById('main-player');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.getAttribute('data-id');
+        player.src = `https://www.youtube.com/embed/videoseries?list=${id}`;
+      });
+    });
+  </script>
+
+</body>
+</html>
